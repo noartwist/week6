@@ -1,0 +1,135 @@
+body{
+    background-color: #8a8a8a;
+    margin: 2.5% 20%;
+    line-height: 1.5;
+}
+
+nav ul {
+    list-style-type: none;  
+    font: 18px;
+    font-family: 'Oxygen', sans-serif;
+    overflow: hidden;
+    background-color: #333;
+    padding: .75vh .75vh .75vh 0vh;
+}
+
+nav a{
+    color: white;
+    text-align: left;
+    padding: .75vh;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
+}
+
+a.skip{
+    position: relative;
+    left: -2000px;
+}
+
+a:focus{
+    border: .2vh solid black;
+}
+
+a.skip:focus{
+    position: relative;
+    left: 1.5px;
+    border: .2vh solid black;
+}
+
+a.current{
+    background-color: black;
+}
+
+h1, h2{
+    color: solid rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    padding: .5vh 1vw 0vh 1vw;
+}
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    font-size: 16px;
+    padding: 0vh 1vw .5vh 1vw;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .25vw;
+}
+
+.navi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@media all and (max-width: 727px){
+    .navi {
+        flex-wrap: wrap;
+        justify-items: center;
+      }
+      
+      .navi > li {
+        flex-basis: 50%;
+      }
+
+      .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .3vw;
+    }
+    body{
+        margin: 1% 5%;
+    }
+
+    p{
+        margin: 0vh 0vh 2vh 0vh;
+    }
+}
+
+@media all and (max-width: 305px) {
+    .navi > li {
+      flex-basis: 100%;
+    }
+    .navi{
+        justify-content: center;
+        justify-items: center;
+    }
+
+}
+
+@media all and (min-width: 728px){
+    nav a{
+        border-right: .1vh solid #bbb;
+    }
+}
+
+@media all and (min-width: 780px){
+    .content{
+        background-image: url("../images/icon.png");
+        background-color: rgba(255, 255, 255, 0.226);
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+    }
+}
+
+footer{
+    min-height: 2 vh;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: .3vh;
+    margin: .2vh;
+    background-color: rgb(46, 46, 46);
+  }
